@@ -2,8 +2,13 @@
   "version": 2,
   "builds": [
     {
-      "src": "package.json",
-      "use": "@vercel/next"
+      "src": "onboarding-app/package.json",
+      "use": "@vercel/next",
+      "config": {
+        "buildCommand": "cd onboarding-app && npm install && npm run build",
+        "installCommand": "cd onboarding-app && npm install",
+        "outputDirectory": "onboarding-app/.next"
+      }
     }
   ]
 }
